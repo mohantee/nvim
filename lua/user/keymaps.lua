@@ -79,14 +79,9 @@ keymap(
 )
 keymap(
 	"n",
-	"<leader>fp",
-	"<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false}))<CR>",
-	opts
-)
-keymap(
-	"n",
 	"<leader>fb",
 	"<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false}))<CR>",
 	opts
 )
+keymap("n", "<leader>fr", "<cmd>Telescope grep_string<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
