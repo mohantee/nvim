@@ -53,6 +53,7 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("sainnhe/gruvbox-material")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("xiyaowong/transparent.nvim")
 
 	-- cmp plugins
