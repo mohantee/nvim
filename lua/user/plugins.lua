@@ -45,6 +45,7 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
 	use("windwp/nvim-autopairs") -- automatic pairs
+	use("windwp/nvim-ts-autotag") -- for jsx auto tag auto close
 	use("numToStr/Comment.nvim") -- easily comment stuff
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
@@ -53,8 +54,10 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("sainnhe/gruvbox-material")
+	use("folke/tokyonight.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("xiyaowong/transparent.nvim")
+	use("oxfist/night-owl.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -64,6 +67,7 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip") -- Snippet completions
 	use("hrsh7th/cmp-nvim-lsp") -- LSP completions
 	use("hrsh7th/cmp-nvim-lua") -- LUA config completions
+	use("onsails/lspkind.nvim") -- vscode like pictograms
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
@@ -87,6 +91,14 @@ return packer.startup(function(use)
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
+
+	-- markdown preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 
 	-- Automatically setup your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

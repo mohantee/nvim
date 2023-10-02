@@ -25,8 +25,9 @@ null_ls.setup({
 	end,
 	debug = false,
 	sources = {
-		formatting.prettierd.with({ extra_args = { "--no-semi", "--singlequote" } }),
+		formatting.prettierd.with({ extra_args = { "--singlequote" } }),
 		formatting.stylua,
-		diagnostics.eslint_d,
+		null_ls.builtins.formatting.prismaFmt,
+		-- diagnostics.eslint_d,
 	},
 })

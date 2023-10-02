@@ -3,16 +3,19 @@ local servers = {
 	"cssls",
 	"html",
 	"tsserver",
-  "tailwindcss",
+	"tailwindcss",
 	-- "pyright",
 	-- "bashls",
 	"jsonls",
 	-- "yamlls",
+	"eslint",
+	"emmet_ls",
+	"prismals",
 }
 
 local settings = {
 	ui = {
-		border = "none",
+		border = "rounded",
 		icons = {
 			package_installed = "◍",
 			package_pending = "◍",

@@ -5,6 +5,10 @@ if not status_ok then
 end
 
 lualine.setup({
+	options = {
+		theme = "tokyonight",
+		globalstatus = true,
+	},
 	sections = {
 		lualine_c = { { "filename", path = 1 } },
 	},
