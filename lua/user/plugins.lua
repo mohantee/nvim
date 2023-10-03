@@ -68,6 +68,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp") -- LSP completions
 	use("hrsh7th/cmp-nvim-lua") -- LUA config completions
 	use("onsails/lspkind.nvim") -- vscode like pictograms
+	use("kdheepak/lazygit.nvim")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
@@ -97,6 +98,19 @@ return packer.startup(function(use)
 		"iamcco/markdown-preview.nvim",
 		run = function()
 			vim.fn["mkdp#util#install"]()
+		end,
+	})
+
+	-- code context
+	-- TODO: create dedicated files for the following plugins
+	use({
+		"utilyre/barbecue.nvim",
+		tag = "*",
+		requires = {
+			"SmiteshP/nvim-navic",
+		},
+		config = function()
+			require("barbecue").setup()
 		end,
 	})
 
